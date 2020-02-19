@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}
+    <title>Logout</title>
+    <meta http-equiv="Refresh" content="3; url={% url 'index' %}">
+
+{% endblock %}
+{% block content %}
+    <div class = "container">
+            <br>
+            <h2>Logged Out, Thanks for Using Our Services!</h2>
+            <br>
+            <h3>Redirecting ..... </h3>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Edit Task - Taskmate</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        </br>
+            <form method="POST">
+                {% csrf_token %}
+                <label><B>Subject</B> (max 250 characters)</label>
+                <input type="text" class="form-control col-lg-6" name="task" placeholder="{{ task_obj.task }}" value="{{ task_obj.task }}">
+                <br>
+                <label><B>Details</B> (max 10000 characters)</label>
+                <textarea class="form-control col-lg-6" name="task_detail" rows="15">{{ task_obj.task_detail }}</textarea>
+                <br>
+                <input type="hidden" name="done" value="{{ task_obj.done }}">
+                <br>
+                <label>Created: {{ task_obj.date_created }}</label>
+                <br>
+                <label>Modified: {{ task_obj.date_modified }}</label>
+                <br>
+                <button type="submit" class="btn btn-primary col-lg-2">Update Task</button>
+                <a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary col-lg-2">Cancel</button></a>
+            </form>
+
+    </div>
+{% endblock content %}
