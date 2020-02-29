@@ -1,1 +1,1 @@
-web:gunicorn django2beginer.wsgi
+web: gunicorn django2beginer.wsgi
