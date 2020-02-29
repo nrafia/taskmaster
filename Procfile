@@ -1,1 +1,1 @@
-web: gunicorn tmpro.wsgi
+web: gunicorn django2beginer.wsgi
